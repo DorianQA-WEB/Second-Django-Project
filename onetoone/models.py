@@ -7,5 +7,5 @@ class User(models.Model):
 class Account(models.Model):
     login = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, primary_key=True)
-    
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+
